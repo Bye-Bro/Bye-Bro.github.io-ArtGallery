@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Muhamet Maliqi">
+    <link rel="icon" href="/code.avif" type="image/x-icon">
+    <title>Art Gallery - Gallery</title>
+</head>
+<style>
+    *::selection{
+    background-color: yellow;
+    }
+    .navbar{
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5  5 20px;
+        box-shadow: 2px 2px 2px 2px rgb(75, 64, 64);
+    }
+    button{
+        font-size: xx-large;
+        text-align: end;
+    }
+    button, a{
+        text-decoration: none;
+        border: transparent;
+        background-color: transparent;
+        color: rgb(175, 131, 131);
+        padding: 0px 1px;
+        font-family: cursive;
+    }
+    a:hover{
+        background-color: rgb(201, 179, 179);
+        zoom: 125%;
+    }
+    .container{
+        margin-top: 7px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 635px;
+        font-family: cursive;
+        padding: 5  5 20px;
+        box-shadow: 1px 1px 2.5px 3.5px rgb(75, 64, 64);
+    }
+    footer{
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        font-size: x-large;
+        font-family: cursive;
+        background-color: rgba(158, 148, 148, 0.411);
+    }
+    footer::selection{
+        background-color: yellow;
+    }
+    .ogg {
+    text-align: center;
+    font-size: xx-large;
+    background: linear-gradient(150deg, rgb(255, 65, 65), rgb(125, 125, 230));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 600px; /* Adjust the height as needed */
+        border: 2px solid black;
+        overflow: hidden;
+        margin: 0 auto; /* Center the box horizontally */
+        box-shadow: 1px 1px 2.5px 3.5px rgb(75, 64, 64);
+        border-radius: 15px;
+        }
+    .image-container img {
+        width: 50%; /* Make the image fill the container */
+        height: auto;
+        }
+    img{
+        border-radius: 15px;
+    }
+    .buttons11{
+        font-size: xx-large;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        height: 75px;
+        text-align: center;
+    }
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+                <div class="buttons">
+            <button><a href="index.html">Home /<a></button>
+            <button><a href="About.html">About /</a></button>
+            <button><a href="Gallery.html">Gallery /</a></button>
+            <button><a href="Contact.html">Contact</a></button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <center><span class="ogg">OUR GALLERY</span></center>
+        <div class="image-container">
+            <img src="mmmmm.jpeg" alt="Image 1">
+            <img src="/28galleries-1-superJumbo.jpg" alt="">
+            <img src="raychan-kJQ6cDyodAM-unsplash.jpg" alt="">
+            <img src="andy-henderson-95BPgm2FbvE-unsplash.jpg" alt="">
+            <img src="luis-villasmil-PaXfY3qNCKI-unsplash.jpg" alt="">
+            <img src="austin-kehmeier-554CrnbNQWg-unsplash.jpg" alt="">
+        </div>
+        <center>
+        <button class="buttons11" id="buttons11" onclick="moveBackward()"><big>&#8249; Backward /</big></button>
+        <button class="buttons11" id="buttons11" onclick=moveForward()><big>Forward &#8250;</big></button>
+        </center>
+    </div>
+    <script>
+        const images = ['mmmmm.jpeg', '28galleries-1-superJumbo.jpg',
+            	        'raychan-kJQ6cDyodAM-unsplash.jpg',
+                        'andy-henderson-95BPgm2FbvE-unsplash.jpg',
+                        'luis-villasmil-PaXfY3qNCKI-unsplash.jpg',
+                        'austin-kehmeier-554CrnbNQWg-unsplash.jpg'];
+        let currentIndex = 0;
+        const imageContainer = document.querySelector('.image-container');
+
+        function updateImage() {
+        imageContainer.innerHTML = `<img src="${images[currentIndex]}" alt="Image ${currentIndex + 1}">`;
+    }
+
+        function moveForward() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    }
+
+        function moveBackward() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    }
+
+    // Initial image display
+        updateImage();
+    </script>
+    <footer>
+        &copy; 2023 ALL RIGHTS RESERVED
+    </footer>
+</body>
+</html>

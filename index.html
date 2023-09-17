@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Muhamet Maliqi">
+    <link rel="icon" href="/code.avif" type="image/x-icon">
+    <title>Art Gallery - Home</title>
+</head>
+<style>
+    body{
+        background-color: rgba(112, 98, 98, 0.13);
+    }
+    ::selection{
+        background-color: rgb(75, 64, 64);
+    }
+    .navbar{
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5  5 20px;
+        box-shadow: 2px 2px 2px 2px rgb(75, 64, 64);
+    }
+    button{
+        font-size: xx-large;
+        text-align: end;
+    }
+    button, a{
+        text-decoration: none;
+        border: transparent;
+        background-color: transparent;
+        color: rgb(175, 131, 131);
+        padding: 0px 1px;
+        font-family: cursive;
+    }
+    a:hover{
+        background-color: rgb(201, 179, 179);
+        zoom: 125%;
+    }
+    .container{
+        margin-top: 7px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 635px;
+        font-family: cursive;
+        padding: 5  5 20px;
+        box-shadow: 1px 1px 2.5px 3.5px rgb(75, 64, 64);
+    }
+    .Welcome{
+        font-family:cursive;
+        font-size: larger;
+        text-align: center;
+        background-color: rgba(209, 207, 207, 0.185);
+        border-radius: 15px;
+        top: -50px;
+    }
+    .Welcome::selection{
+        background-color: rgb(75, 64, 64);
+    }
+    img{
+        height: 250px;
+        border-radius: 15%;
+        margin-right: 16px;
+        margin-top: 60px;
+        padding: 7px;
+        padding-left: -7px;
+        box-shadow: 1px 1px 4px 4px black;
+    }
+    img::selection{
+        background-color: yellow;
+    }
+    footer{
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        font-size: x-large;
+        font-family: cursive;
+        background-color: rgba(158, 148, 148, 0.411);
+    }
+    footer::selection{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+                <div class="buttons">
+            <button><a href="index.html">Home / <a></button>
+            <button><a href="About.html">About /</a></button>
+            <button><a href="Gallery.html">Gallery /</a></button>
+            <button><a href="Contact.html">Contact</a></button>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <p class="Welcome">
+            Welcome to our Art Gallery web page, where creativity and imagination come
+            to life! Explore a captivating world of visual delight as you browse through
+            an exquisite collection of artworks from talented artists around the globe.
+            Our virtual gallery space offers a seamless and immersive experience, allowing
+            you to appreciate a wide range of styles, mediums, and themes. From vibrant paintings
+            to intricate sculptures, our curated selection showcases the diverse and thought-provoking nature of
+            contemporary art. Whether you're a seasoned art enthusiast or just beginning your artistic journey,
+            our Art Gallery web page invites you to discover, appreciate, and be inspired by the boundless possibilities of human expression.
+        </p><br>
+        <div class="some_pics">
+            <img src="mmmmm.jpeg">
+            <img style="border-radius: 15%;" src="28galleries-1-superJumbo.jpg" alt="">
+            <img src="raychan-kJQ6cDyodAM-unsplash.jpg" alt="">
+            <img src="serg-bataev-pWEFjiRkjDU-unsplash.jpg" alt="">
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 ALL RIGHTS RESERVED
+    </footer>
+</body>
+</html>

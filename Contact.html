@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Muhamet Maliqi">
+    <link rel="icon" href="/code.avif" type="image/x-icon">
+    <title>Art Gallery - Contact</title>
+</head>
+<style>
+    *::selection{
+    background-color: yellow;
+    }
+    .navbar{
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 75px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5  5 20px;
+        box-shadow: 2px 2px 2px 2px rgb(75, 64, 64);
+    }
+    button{
+        font-size: xx-large;
+        text-align: end;
+    }
+    button, a{
+        text-decoration: none;
+        border: transparent;
+        background-color: transparent;
+        color: rgb(175, 131, 131);
+        padding: 0px 1px;
+        font-family: cursive;
+    }
+    a:hover{
+        background-color: rgb(201, 179, 179);
+        zoom: 125%;
+    }
+    .container{
+        margin-top: 7px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 635px;
+        font-family: cursive;
+        padding: 5  5 20px;
+        box-shadow: 1px 1px 2.5px 3.5px rgb(75, 64, 64);
+    }
+    .contact{
+        margin-top: 120px;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 15px;
+        height: 455px;
+        width: 1300px;
+        font-family: cursive;
+        padding: 5  5 20px;
+        box-shadow: 1px 1px 2.5px 3.5px rgb(75, 64, 64);
+        text-align: center;
+    }
+    footer{
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        font-size: x-large;
+        font-family: cursive;
+        background-color: rgba(158, 148, 148, 0.411);
+    }
+    footer::selection{
+        background-color: yellow;
+    }
+    .form, label, input{
+        border-radius: 10px;
+        height: 25px;
+        margin-top: 25px;
+        /*background-color: aliceblue;*/
+    }
+    .Comment{
+        height: 150px;
+        width: 50%;
+        /*box-shadow: 1px 2.5px 3px 4.1px black;*/
+    }
+    .Comment:hover{
+        height: 150px;
+        width: 50%;
+        box-shadow: 1px 2.5px 3px 4.1px black;
+    }
+    .btn{
+        border: 3px solid;
+        border-radius: 15px;
+        box-shadow: 1px 2px 3px 4px grey;
+        color: black;
+        background-color: rgba(83, 64, 64, 0.445);
+    }
+    .btn:hover{
+        zoom: 135%;
+    }
+    button, a {
+        font-family: cursive; /* Font-family set to cursive */
+    }
+    .container, .contact, footer {
+        font-family: cursive; /* Font-family set to cursive */
+    }
+    .form, label, input {
+        /* ... Other styles ... */
+        font-family: cursive; /* Font-family set to cursive */
+        font-size: auto;
+        
+    }
+    input::placeholder{
+        text-align: center;
+        height: 15px;
+        color: gray;
+        font-family: cursive;
+    }
+    /*.cursive-input {
+        font-family: cursive;
+        font-size: 15px;
+        
+    }*/
+    input[type="text"], input[type="email"],textarea[type="comment"] {
+    font-family: cursive;
+    }
+    textarea{
+        font-family: cursive;
+        font-size: larger;
+        border-radius: 15px;
+        box-shadow: 1px 2px 3px 3.85px grey;
+        border: transparent;
+    }
+    label{
+        font-size: x-large;
+    }
+    input{
+        height: 32.2px;
+    }
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+                <div class="buttons">
+            <button><a href="index.html">Home /<a></button>
+            <button><a href="About.html">About /</a></button>
+            <button><a href="Gallery.html">Gallery /</a></button>
+            <button><a href="Contact.html">Contact</a></button>
+            </div>
+        </div>
+    </nav>
+    <center>
+    <div class="container">
+        <div class="contact">
+            <form action="Contact.php" method="post">
+                <div class="form">
+                    <label for="name">Name: </label>
+                    <input type="text" id="nameInput" name="name" spellcheck="true" autofocus placeholder="Enter your Name" required>
+                    <label for="lastname">Lastname: </label>
+                    <input type="text" id="lastnameInput" name="lastname" spellcheck="true" autofocus placeholder="Enter your Lastname" required>
+                    <label for="email">E-Mail: </label>
+                    <input type="email" id="emailInput" name="email" autofocus placeholder="someone@example.com" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="number" id="phoneInput" name="phone" autofocus placeholder="+383 - (0) - 123 - 456" required>
+                    <br>
+                    <div class="comment-section">
+                        <label for="comment">Comment:</label><br>
+                        <textarea id="comment" name="comment" rows="7" cols="75.9"></textarea><br>
+                    </div>
+                    <br><br>
+                    <button class="btn" type="submit">Submit</button>
+                    <button class="btn" type="reset">Reset</button>
+                </div>
+            </form>
+            
+    </div>
+    </center>
+    <script>
+        /*function applyCursiveStyle() {
+            const inputs = document.querySelectorAll('.cursive-input');
+            inputs.forEach(input => {
+            input.classList.add('cursive-input');
+        });
+    }*/
+    document.getElementById("commentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const comment = document.getElementById("comment").value;
+
+            const commentDiv = document.createElement("div");
+            commentDiv.classList.add("comment");
+            commentDiv.innerHTML = `<strong>${name}:</strong> ${comment}`;
+
+            document.querySelector(".comment-section").appendChild(commentDiv);
+
+            // Reset the form
+            document.getElementById("commentForm").reset();
+        });
+    </script>
+    <footer>
+        &copy; 2023 ALL RIGHTS RESERVED
+    </footer>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+        function sendEmail(){
+            Email.send({
+            Host : "smtp.gmail.com",
+            Username : "metimuhamet69@gmail.com",
+            Password : "Muhamet2006",
+            To : 'metimuhamet69@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "New Contact Form!",
+            Body : "Name " + document.getElementById("text").value + "<br> Email: " +
+            document.getElementById("email").value +
+            "<br> Phone: " + document.getElementById("number").value +
+            "<br> Message: " + document.getElementById("mesage").value
+        }).then(
+        message => alert("Message Sent Succesfully!")
+    );
+        }
+    </script> -->
+</body>
+</html>
